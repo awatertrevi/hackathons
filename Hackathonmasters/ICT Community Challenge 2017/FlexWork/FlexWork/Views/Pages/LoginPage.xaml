@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Login" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:FlexWork.Views.Controls;assembly=FlexWork" x:Class="FlexWork.Views.Pages.LoginPage">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" Spacing="0">
+			<BoxView HeightRequest="20" Color="White">
+				<BoxView.IsVisible>
+					<OnPlatform x:TypeArguments="x:Boolean" iOS="True" Android="False" />
+				</BoxView.IsVisible>
+			</BoxView>
+			<ScrollView VerticalOptions="FillAndExpand">
+				<StackLayout VerticalOptions="FillAndExpand" Padding="35" Spacing="25">
+					<Label VerticalOptions="Start" Text="Vind jouw ultieme flex plek!" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" />
+					<StackLayout Spacing="0" VerticalOptions="CenterAndExpand">
+						<Image HeightRequest="325" Source="profile_preview.png" />
+						<BoxView HeightRequest="1" BackgroundColor="Gray" />
+					</StackLayout>
+					<StackLayout Spacing="0" VerticalOptions="End">
+						<Label Text="Als je doorgaat, stem je in met onze" HorizontalTextAlignment="Center" FontAttributes="Italic" FontSize="Micro" TextColor="Gray" />
+						<Label Text="privacy voorwaarde." HorizontalTextAlignment="Center" FontSize="Micro" FontAttributes="Bold, Italic" TextColor="Gray">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Command="{Binding NavigateToPrivacyPolicy}" />
+							</Label.GestureRecognizers>
+						</Label>
+						<controls:FacebookLoginButton Margin="0, 10" />
+						<Image HorizontalOptions="Center" WidthRequest="40" Source="dismiss-dark.png">
+							<Image.GestureRecognizers>
+								<TapGestureRecognizer Command="{Binding NavigateBack}" />
+							</Image.GestureRecognizers>
+							<Image.IsVisible>
+								<OnPlatform x:TypeArguments="x:Boolean" iOS="True" Android="False" />
+							</Image.IsVisible>
+						</Image>
+					</StackLayout>
+				</StackLayout>
+			</ScrollView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

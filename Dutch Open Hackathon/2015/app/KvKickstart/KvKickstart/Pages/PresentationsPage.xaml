@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Presentaties" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:shared="clr-namespace:DOH2015.StaticResources;assembly=DOH2015.StaticResources" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DOH2015.PresentationsPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<shared:TimeWithSecondToHourMinuteConverter x:Key="timeConvert">
+			</shared:TimeWithSecondToHourMinuteConverter>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<ListView RowHeight="80" x:Name="Presentaties" ItemsSource="{Binding Presentations}" HasUnevenRows="true">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Grid Padding="10, 10, 10, 10">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="2*" />
+								<RowDefinition Height="1*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding title}" TextColor="Black">
+							</Label>
+							<Image Grid.Row="0" Grid.Column="2" Source="ic_forward_50dp.png" HorizontalOptions="End" VerticalOptions="Center">
+							</Image>
+							<Label Grid.Row="1" Grid.Column="0" Text="{Binding presenter.name}" TextColor="Gray" FontSize="Small">
+							</Label>
+							<Label Grid.Row="1" Grid.Column="1" Text="Stage 2" TextColor="Gray" FontSize="Small">
+							</Label>
+							<Label Grid.Row="1" Grid.Column="2" Text="{Binding time, Converter={StaticResource timeConvert}}" TextColor="Gray" FontSize="Small" HorizontalOptions="End" TranslationX="-4">
+							</Label>
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

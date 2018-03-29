@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="{Binding Name, StringFormat='Ingecheckt bij: {0}'}" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:cells="clr-namespace:FlexWork.Views.Cells;assembly=FlexWork"  xmlns:converters="clr-namespace:FlexWork.Utilities.Converters;assembly=FlexWork"  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlexWork.Views.Pages.CheckoutPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:OpeningHoursToTodayConverter x:Key="openingHoursToTodayConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+		 	<TableView x:Name="tableView" Intent="Menu" HasUnevenRows="True">
+				<TableView.Root>
+					<TableSection>
+						<ViewCell>
+							<StackLayout Spacing="0">
+								<BoxView HeightRequest="1" BackgroundColor="#CDCDCD" />
+								<Image Source="{Binding Image}" HeightRequest="200" Aspect="AspectFill" />
+								<Label x:Name="description" Text="{Binding Description}" />
+									<BoxView HeightRequest="1" BackgroundColor="#CDCDCD" />
+							</StackLayout>
+						</ViewCell>
+					</TableSection>
+					<TableSection Title="Openingstijden">
+						<ViewCell>
+							<StackLayout Spacing="0">	
+								<BoxView HeightRequest="1" BackgroundColor="#CDCDCD" />
+								<Label Margin="15, 12.5" Text="{Binding OpeningHours, Converter={StaticResource openingHoursToTodayConverter}}" />
+								<BoxView HeightRequest="1" BackgroundColor="#CDCDCD" />
+							</StackLayout>
+						</ViewCell>
+					</TableSection>
+
+					<TableSection Title="Wi-Fi">
+						<ViewCell>
+							<StackLayout>
+								<BoxView HeightRequest="1" BackgroundColor="#CDCDCD" />
+								<StackLayout Orientation="Horizontal">
+									<Image Source="wifi.png" WidthRequest="30" Margin="15, 5" />
+									<Label Text="{Binding Name, StringFormat='{0} Guest'}" VerticalOptions="CenterAndExpand"  />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+						<ViewCell>
+							<StackLayout>
+								<BoxView HeightRequest="1" BackgroundColor="#CDCDCD" />
+								<StackLayout Orientation="Horizontal">
+									<Image Source="lock.png" WidthRequest="30" Margin="15, 5" />
+									<Label Text="KipSamba1997" VerticalOptions="CenterAndExpand"  />
+								</StackLayout>
+								<BoxView HeightRequest="1" BackgroundColor="#CDCDCD" />
+							</StackLayout>
+						</ViewCell>
+					</TableSection>
+					<TableSection>
+						<cells:TransparentCell IsEnabled="False">
+							<StackLayout Spacing="10">
+								<Image Source="coffe-couponcode.png"/>
+								<Label Text="Laat deze code scannen voor een gratis kopje koffie!" HorizontalTextAlignment="Center" />
+							</StackLayout>
+						</cells:TransparentCell>
+						</TableSection>
+				</TableView.Root>
+			</TableView>
+			<Button x:Name="checkout" Text="Uitchecken" VerticalOptions="EndAndExpand" BorderRadius="0" FontSize="20" TextColor="White" Clicked="Handle_Clicked" BackgroundColor="#00c1d5" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

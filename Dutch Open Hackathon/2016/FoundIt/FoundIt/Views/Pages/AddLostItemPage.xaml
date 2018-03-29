@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:controls="clr-namespace:FoundIt.Views.Controls;assembly=FoundIt" x:Class="FoundIt.Views.Pages.AddLostItemPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Save" Command="{Binding SaveLostItem}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<StackLayout x:Name="infoDialog" Spacing="15" Orientation="Horizontal" Padding="15" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="#609CD5">
+				<Label Text="Please consider if your belongings where stolen, if so this can be reported to the police by checkin the is stolen switch." TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" />
+				<Image Source="delete.png" WidthRequest="25" VerticalOptions="Center">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Handle_Tapped" />
+					</Image.GestureRecognizers>
+				</Image>
+			</StackLayout>
+			<TableView Intent="Menu" HasUnevenRows="True">
+				<TableSection>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Name:" TextColor="Silver" />
+							<Entry Text="{Binding LostItem.Name}" TextChanged="NameChanged" />
+						</StackLayout>
+					</ViewCell>
+				</TableSection>
+				<TableSection>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Description:" TextColor="Silver" />
+							<Editor HeightRequest="100" Text="{Binding LostItem.Description, Mode=TwoWay}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Time:" TextColor="Silver" />
+							<controls:DateTimePicker DateTime="{Binding LostItem.EstimatedLoseTime, Mode=TwoWay}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Is Stolen:" TextColor="Silver" />
+							<Switch IsToggled="{Binding LostItem.IsStolen, Mode=TwoWay}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Location:" TextColor="Silver" />
+							<Entry Text="{Binding LostItem.LoseAddress, Mode=TwoWay}" Unfocused="LocationUnfocused" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Serial Number:" TextColor="Silver" />
+							<Entry Text="{Binding LostItem.SerialNumber, Mode=TwoWay}" Keyboard="Numeric" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Range:" TextColor="Silver" />
+							<Picker x:Name="radiusPicker" SelectedIndexChanged="RadiusChanged" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<controls:ExtendedMap x:Name="map" IsShowingUser="True" IsEnabled="False" HeightRequest="200" />
+					</ViewCell>
+				</TableSection>
+			</TableView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

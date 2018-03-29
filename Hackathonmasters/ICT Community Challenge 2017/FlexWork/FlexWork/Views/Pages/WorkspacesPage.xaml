@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Workspaces" Icon="briefcase.png" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:james="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" xmlns:controls="clr-namespace:FlexWork.Views.Controls;assembly=FlexWork" x:Class="FlexWork.Views.Pages.WorkspacesPage">
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<controls:SegmentedControl Margin="15, 10" SelectedValue="Dichtbij" SelectedValueChanged="SegmentedControlSelectedIndexChanged">
+				<controls:SegmentedControlSegmentOption Text="Dichtbij" />
+				<controls:SegmentedControlSegmentOption Text="Recent" />
+			</controls:SegmentedControl>
+			<ListView ItemsSource="{Binding Workspaces}" HasUnevenRows="True" ItemTapped="Handle_ItemTapped" IsRefreshing="{Binding IsRefreshing}" IsPullToRefreshEnabled="True" RefreshCommand="{Binding LoadWorkspaces}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" Padding="15, 12.5" Spacing="15">
+								<Image Source="{Binding Image}" WidthRequest="75" />
+								<StackLayout Spacing="3">
+									<Label Text="{Binding Name}" FontSize="Large" TextColor="Black" />
+									<Label Text="{Binding FullAddress}" FontSize="Medium" TextColor="Black" />
+									<Label Text="{Binding Description}" FontSize="Small" TextColor="Gray" />
+								</StackLayout>
+							</StackLayout> 
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout x:Name="checkinActive" BackgroundColor="#00c1d5" IsVisible="False" Padding="15">
+				<StackLayout.GestureRecognizers>
+					<TapGestureRecognizer Tapped="Handle_Tapped" />
+				</StackLayout.GestureRecognizers>
+				<Label x:Name="checkinText" TextColor="White" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

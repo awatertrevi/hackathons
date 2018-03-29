@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.doh2015.kvkickstart">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="22" />
+	<application android:theme="@style/CustomTheme" android:icon="@drawable/logo" android:label="KvKickstart">
+		<receiver android:name="localnotifications.plugin.ScheduledAlarmHandler" android:enabled="true"></receiver>
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>

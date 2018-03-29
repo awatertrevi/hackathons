@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{6EA00D38-A8B1-42AA-997B-FD91CFFC44C0}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FlexWork</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\AccountPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\MapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\FlexWorkspaceDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\WorkspacesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\LoadingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\CheckoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\WiFiAccessGainedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\DemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\RootPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\ExtendedMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApplicationContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\ObservableBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\PropertyNotificationEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\TabPages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Helpers\NavigationHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Helpers\NetworkHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Helpers\SettingsHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\FlexWorkspaceDetailPage.xaml.cs">
+      <DependentUpon>FlexWorkspaceDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RestResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\FacebookLoginButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapPageViewModel.cs">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapPageViewModel.Controller.cs">
+      <DependentUpon>MapPageViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Account\LoginPageViewModel.cs">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Account\LoginPageViewModel.Controller.cs">
+      <DependentUpon>LoginPageViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AccountPageViewModel.cs">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AccountPageViewModel.Controller.cs">
+      <DependentUpon>AccountPageViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\WorkspacesPage.xaml.cs">
+      <DependentUpon>WorkspacesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\SegmentedControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\LoadingPage.xaml.cs">
+      <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoadingPageViewModel.cs">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoadingPageViewModel.Controller.cs">
+      <DependentUpon>LoadingPageViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FlexWorkspaceDetailPageViewModel.cs">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FlexWorkspaceDetailPageViewModel.Controller.cs">
+      <DependentUpon>FlexWorkspaceDetailPageViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Account\WorkspacesPageViewModel.cs">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Account\WorkspacesPageViewModel.Controller.cs">
+      <DependentUpon>WorkspacesPageViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Workspace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Converters\OpeningHoursToTodayConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\TransparentCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\CheckoutPage.xaml.cs">
+      <DependentUpon>CheckoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\NoHeaderTableViewEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\WiFiAccessGainedPage.xaml.cs">
+      <DependentUpon>WiFiAccessGainedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\DemoPage.xaml.cs">
+      <DependentUpon>DemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DemoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\RoundedBoxView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Pages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Controls\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ComponentModel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Account\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Cells\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Effects\" />
+  </ItemGroup>
+</Project>

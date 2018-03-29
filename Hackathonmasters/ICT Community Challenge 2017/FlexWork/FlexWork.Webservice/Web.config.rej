@@ -1,0 +1,12 @@
+diff a/FlexWork/FlexWork.Webservice/Web.config b/FlexWork/FlexWork.Webservice/Web.config	(rejected hunks)
+@@ -11,6 +11,10 @@
+     <customErrors mode="Off" />
+     <compilation debug="true">
+       <assemblies>
++        <add assembly="System.Collections.Concurrent" />
++        <add assembly="System.IO" />
++        <add assembly="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
++        <add assembly="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+       </assemblies>
+     </compilation>
+   </system.web>

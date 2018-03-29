@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DOH2015.HomePage" Title="Home">
+	<ContentPage.Content>
+		<Grid Padding="1" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#F5F4F0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Row="0" Grid.Column="0" Padding="0" HorizontalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="5"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="5"/>
+				</Grid.ColumnDefinitions>
+				<Image InputTransparent="true" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="kvklogo.png" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			</Grid>
+			<Grid Grid.Row="0" Grid.Column="1" Padding="0" HorizontalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="5"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="5"/>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Row="0" Command="{Binding NavigateToPresentations}" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4"/>
+				<Image InputTransparent="true" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="Presentation.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+				<Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="Presentaties" FontSize="18" TextColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand"/>
+			</Grid>
+
+			<Grid Grid.Row="1" Grid.Column="0" Padding="0" HorizontalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="5"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="5"/>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Row="0" Command="{Binding NavigateToIndoors}" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4"/>
+				<Image InputTransparent="true" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="Indoors.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+				<Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="Plattegrond" FontSize="18" TextColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand"/>
+			</Grid>
+
+			<Grid Grid.Row="1" Grid.Column="1" Padding="0" HorizontalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="5"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="5"/>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Row="0" Command="{Binding NavigateToSchedule}" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4"/>
+				<Image InputTransparent="true" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="Schedule.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+				<Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="Mijn Schema" FontSize="18" TextColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand"/>
+			</Grid>
+
+			<Grid Grid.Row="2" Grid.Column="0" Padding="0" HorizontalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="5"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="5"/>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Row="0" Command="{Binding NavigateToMyCompany}" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4"/>
+				<Image InputTransparent="true" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="Mijnbedrijf.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+				<Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="Mijn Bedrijf" FontSize="18" TextColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand"/>
+			</Grid>
+			<Grid Grid.Row="2" Grid.Column="1" Padding="0" HorizontalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="5"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="5"/>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Row="0" Command="{Binding NavigateToSettings}" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4"/>
+				<Image InputTransparent="true" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="settings.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+				<Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="Instellingen" FontSize="18" TextColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand"/>
+			</Grid>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

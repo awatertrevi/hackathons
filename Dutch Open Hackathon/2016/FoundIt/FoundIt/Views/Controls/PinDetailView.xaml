@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FoundIt.Views.Controls.PinDetailView">
+	<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="50" />
+			<ColumnDefinition Width="Auto" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Image x:Name="imgImage" Source="https://s.gravatar.com/avatar/4f789513b4553ffc3de557b7d7774e18?s=80" Grid.Column="0" HorizontalOptions="FillAndExpand" Aspect="Fill">
+		</Image>
+		<StackLayout Orientation="Vertical" Grid.Column="1" Padding="0, 10, 10, 10">
+			<Label x:Name="lblTitle">Title</Label>
+			<Label x:Name="lblSubtitle" FontSize="10" TextColor="Gray">Subtitle</Label>
+		</StackLayout>
+	</Grid>
+</ContentView>

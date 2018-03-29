@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Mijn Account" Icon="user.png" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:james="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="FlexWork.AccountPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Uitloggen" Clicked="StartSignout"/>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<TableView Intent="Settings" HasUnevenRows="True">
+			<TableView.Root>
+				<TableSection>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" Spacing="20" Padding="15, 10">
+							<james:CircleImage HeightRequest="70" WidthRequest="70" Source="{Binding CurrentUser.ProfilePhoto}" />
+							<StackLayout VerticalOptions="Center" Spacing="0">
+								<Label Text="{Binding CurrentUser.FullName}" FontAttributes="Bold" />
+								<Label Text="{Binding CurrentUser.Email}" />
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+					</TableSection>
+				<TableSection Title="Vakgebied">
+					<ViewCell Tapped="Handle_Tapped">
+						<StackLayout Padding="15, 12.5">
+							<Label x:Name="expertiseLabel" Text="Vul een vakgebied in..." />
+							<Picker x:Name="expertisePicker" IsVisible="False" SelectedIndexChanged="Handle_SelectedIndexChanged" />
+						</StackLayout>
+					</ViewCell>
+				</TableSection>
+
+				<TableSection>
+					<TextCell Text="Licenties" />
+					<TextCell Text="Privacy Policy" />
+				</TableSection>
+			</TableView.Root>
+		</TableView>
+	</ContentPage.Content>
+</ContentPage>

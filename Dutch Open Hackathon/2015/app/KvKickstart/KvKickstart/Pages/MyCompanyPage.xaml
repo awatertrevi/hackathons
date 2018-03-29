@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Mijn Bedrijf" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:shared="clr-namespace:DOH2015.StaticResources;assembly=DOH2015.StaticResources" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms" x:Class="DOH2015.MyCompanyPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<shared:CheckboxColorConverter x:Key="checkConvert">
+			</shared:CheckboxColorConverter>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView ItemsSource="{Binding Todos}" x:Name="TodoList">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal">
+								<controls:CheckBox DefaultText="{Binding title}" TextColor="{Binding flag, Converter={StaticResource checkConvert}}" Checked="{Binding flag}" HorizontalOptions="FillAndExpand" />
+								<Button Text="..." Clicked="InfoClicked" CommandParameter="{Binding description}" BackgroundColor="Transparent">
+								</Button>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<Entry VerticalOptions="End" Placeholder="Voer hier een taak in" x:Name="eigenTaak"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

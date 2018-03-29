@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlexWork.Views.Pages.WiFiAccessGainedPage">
+	<ContentPage.Content>
+		<StackLayout Padding="25, 45, 25, 25" Spacing="15">
+			<Image Source="http://www.073magazine.nl/wp-content/uploads/2015/06/logo_verkadefabriek.jpg" WidthRequest="300" HorizontalOptions="Center" />
+			<Label Text="Bedankt voor het inchecken bij de Verkadefabriek! Hier zijn de Wi-Fi inlog gegevens." HorizontalOptions="Center" />
+			<StackLayout VerticalOptions="CenterAndExpand">
+				<StackLayout HorizontalOptions="Center">
+					<StackLayout Orientation="Horizontal">
+					<Image Source="wifi.png" WidthRequest="30" />
+					<Label Text=" Verkadefabriek Gast" VerticalOptions="Center" FontAttributes="Italic" />
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Image Source="lock.png" WidthRequest="30" />
+						<Label Text=" WelkomFlexWorker2017" VerticalOptions="Center" FontAttributes="Italic" />
+					</StackLayout>
+				</StackLayout>
+				<BoxView HeightRequest="1" Margin="25, 10, 25, 0" BackgroundColor="Gray" />
+				<Image Source="coffe-couponcode.png"/>
+				<Label Text="Laat deze code scannen voor een gratis kopje koffie!" HorizontalTextAlignment="Center" />
+			</StackLayout>
+			<Image HorizontalOptions="Center" WidthRequest="40" Source="dismiss-dark.png">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Tapped="Handle_Tapped" />
+				</Image.GestureRecognizers>
+				<Image.IsVisible>
+					<OnPlatform x:TypeArguments="x:Boolean" iOS="True" Android="False" />
+				</Image.IsVisible>
+			</Image>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

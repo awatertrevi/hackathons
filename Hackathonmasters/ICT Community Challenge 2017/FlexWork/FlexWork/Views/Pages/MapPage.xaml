@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Kaart" Icon="map.png" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:FlexWork.Views.Controls;assembly=FlexWork" x:Class="FlexWork.MapPage">
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<SearchBar CancelButtonColor="#AC145A" Placeholder="Zoek op locatie..." SearchButtonPressed="StartSearch"/>
+			<controls:ExtendedMap x:Name="map" IsShowingUser="True" />
+			<StackLayout x:Name="checkinActive" BackgroundColor="#00c1d5" IsVisible="False" Padding="15">
+				<StackLayout.GestureRecognizers>
+					<TapGestureRecognizer Tapped="Handle_Tapped" />
+				</StackLayout.GestureRecognizers>
+				<Label x:Name="checkinText" TextColor="White" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

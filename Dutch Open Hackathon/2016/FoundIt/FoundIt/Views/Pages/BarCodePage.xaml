@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="New Barcode" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:FoundIt.Views.Controls;assembly=FoundIt" x:Class="FoundIt.Views.Pages.BarCodePage">
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<TableView HasUnevenRows="True">
+				<TableSection>
+					<ViewCell>
+						<Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="barcode.png" />
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Klantnummer:" TextColor="Silver" />
+							<Entry Text="1122349" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Klantcode:" TextColor="Silver" />
+							<Entry Text="DOHA" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout x:Name="infoDialog" Spacing="15" Orientation="Horizontal" Padding="15" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="#609CD5">
+							<Label Text="The barcode has been created, you will be able to drop of the found item at one of these local take-in points!" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" />
+							<Image Source="delete.png" WidthRequest="25" VerticalOptions="Center">
+								<Image.GestureRecognizers>
+									<TapGestureRecognizer Tapped="Handle_Tapped" />
+								</Image.GestureRecognizers>
+							</Image>
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<controls:ExtendedMap x:Name="map" HeightRequest="200" IsEnabled="False" />
+					</ViewCell>
+				</TableSection>
+			</TableView>
+			<Button VerticalOptions="EndAndExpand" Text="I Scanned It!" Clicked="Handle_Clicked" FontSize="20" TextColor="White" BackgroundColor="#FFC100" BorderRadius="0" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{981FB803-D2FE-45E5-A912-5E01CBDB51AB}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Recognition</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ContactsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewContactPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoadingScreen.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RecognizerPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecognizerPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\ObservableBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\PropertyNotificationEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Person.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RootPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactsPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContactsPage.xaml.cs">
+      <DependentUpon>ContactsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\CameraView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\NavigationHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NewContactPage.xaml.cs">
+      <DependentUpon>NewContactPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\PhotoResultEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NewContactPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SavedPersonImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\PersonIdToImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LoadingScreen.xaml.cs">
+      <DependentUpon>LoadingScreen.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Controls\" />
+  </ItemGroup>
+</Project>

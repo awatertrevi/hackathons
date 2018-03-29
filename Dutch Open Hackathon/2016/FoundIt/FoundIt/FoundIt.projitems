@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{E566B107-FC4D-4469-8B16-20F82B3CC34E}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FoundIt</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\MapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\LostItemsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\FoundPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\AddLostItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\DetailLostItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\IncommingCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\OutgoingCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\ChatPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\BarCodePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\FoundItemsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Media\IMediaPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Media\MediaFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Media\MediaStorageOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\ExtendedMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\PinDetailView.xaml.cs">
+      <DependentUpon>PinDetailView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\RootPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\LostItemsPage.xaml.cs">
+      <DependentUpon>LostItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\FoundPage.xaml.cs">
+      <DependentUpon>FoundPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\ExtendedNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Helpers\NavigationHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\ObservableBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\PropertyNotificationEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FoundPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LostItemsPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\AddLostItemPage.xaml.cs">
+      <DependentUpon>AddLostItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\LabeledStackLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\DateTimePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddLostItemPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\CricleEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApplicationContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Helpers\NetworkHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Helpers\SettingsHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RestResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LostItemGrouping.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\FacebookLoginButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\DetailLostItemPage.xaml.cs">
+      <DependentUpon>DetailLostItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailLostItemViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\SegmentedControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\MyDataTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\IncommingCell.xaml.cs">
+      <DependentUpon>IncommingCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\OutgoingCell.xaml.cs">
+      <DependentUpon>OutgoingCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChatPage.xaml.cs">
+      <DependentUpon>ChatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChatPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\BarCodePage.xaml.cs">
+      <DependentUpon>BarCodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BarCodePageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\FoundItemsPage.xaml.cs">
+      <DependentUpon>FoundItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FoundItemsPageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Pages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ComponentModel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Effects\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Cells\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Controls\PinDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Aanmelden" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms" x:Class="DOH2015.SignUpPage">
+	<ContentPage.Content>
+		<StackLayout  Orientation="Vertical" Padding="15,15,15,15">
+			<Picker x:Name="locatiePicker" Title="Locatie" HorizontalOptions="FillAndExpand"></Picker> 
+			<Entry Placeholder="Email"></Entry>		
+			<controls:CheckBox DefaultText="Ik accepteer de privacy-voorwaarden van de Kamer van Koophandel."></controls:CheckBox>
+
+			<Button Text="Aanmelden!" HorizontalOptions="CenterAndExpand" Command="{Binding RegisterCommand}"></Button>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

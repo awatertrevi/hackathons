@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Lost Items" Icon="dog_footprint.png" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:FoundIt.Views.Controls;assembly=FoundIt" x:Class="FoundIt.Views.Pages.LostItemsPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Add" Command="{Binding AddNewLostItem}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<ListView x:Name="lostItems" ItemsSource="{Binding LostItems}" ItemTapped="OpenDetail" IsRefreshing="{Binding IsLoading}" IsPullToRefreshEnabled="True" RefreshCommand="{Binding LoadLostItems}" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Key}">
+				<ListView.GroupHeaderTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout BackgroundColor="#F7F7F7" VerticalOptions="FillAndExpand">
+								<StackLayout.Padding>
+									<OnPlatform x:TypeArguments="Thickness" iOS="15, 0" Android="15" />
+								</StackLayout.Padding>
+								<Label Text="{Binding Key}" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.GroupHeaderTemplate>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding Name}" Detail="{Binding LoseAddress}" DetailColor="Gray">
+							<TextCell.ContextActions>
+								<MenuItem Clicked="DeleteLostItem" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
+							</TextCell.ContextActions>
+						</TextCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

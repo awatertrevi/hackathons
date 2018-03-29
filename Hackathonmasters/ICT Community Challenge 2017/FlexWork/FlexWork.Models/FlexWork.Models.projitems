@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{8F3F9136-DF2A-422C-AD0A-DA1E288C22CF}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FlexWork.Models</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Facility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Workspace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WorkspaceFacility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WorkspaceRegistration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OpeningHours.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rating.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)User.cs" />
+  </ItemGroup>
+</Project>

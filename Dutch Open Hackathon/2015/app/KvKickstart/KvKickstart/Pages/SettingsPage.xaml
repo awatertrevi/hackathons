@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Instellingen" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DOH2015.SettingsPage">
+	<ContentPage.Content>
+		<TableView>
+			<TableRoot>
+				<TableSection>
+					<TextCell Text="Geselecteerde stad"/>
+					<TextCell Text="{Binding SelectedCity}" x:Name="city" Command="{Binding SelectCityCommand}"/>
+					<SwitchCell Text="Reminders" />
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</ContentPage.Content>
+</ContentPage>

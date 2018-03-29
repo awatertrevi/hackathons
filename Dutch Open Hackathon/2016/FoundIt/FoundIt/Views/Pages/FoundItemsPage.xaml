@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Found Items" Icon="center_direction.png" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FoundIt.Views.Pages.FoundItemsPage">
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<ListView x:Name="retrievalRequests" ItemsSource="{Binding FoundItems}" ItemTapped="OpenRetrievalDetail" IsRefreshing="{Binding IsLoading}" IsPullToRefreshEnabled="True" RefreshCommand="{Binding LoadFoundItems}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding LostItem.Name}" Detail="{Binding FindAddress}" DetailColor="Gray">
+							<TextCell.ContextActions>
+								<MenuItem Clicked="DeleteFoundItem" CommandParameter="{Binding .}" Text="Not Mine" IsDestructive="True" />
+							</TextCell.ContextActions>
+						</TextCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

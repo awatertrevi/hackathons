@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="{Binding LostItem.Name}" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" x:Class="FoundIt.Views.Pages.DetailLostItemPage">
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<TableView Intent="Menu" HasUnevenRows="True">
+				<TableSection>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Name:" TextColor="Silver" />
+							<Label Text="{Binding LostItem.Name}" />
+						</StackLayout>
+					</ViewCell>
+				</TableSection>
+				<TableSection>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Description:" TextColor="Silver" />
+							<Label Text="{Binding LostItem.Description}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Name:" TextColor="Silver" />
+							<Label Text="{Binding LostItem.EstimatedLoseTime, StringFormat='{0:d} om {0:t}'}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Lose Address:" TextColor="Silver" />
+							<Label Text="{Binding LostItem.LoseAddress}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<maps:Map x:Name="map" IsEnabled="False" HeightRequest="200" />
+					</ViewCell>
+				</TableSection>
+			</TableView>
+			<Button VerticalOptions="EndAndExpand" Text="I Found It!" Clicked="Handle_Clicked" FontSize="20" TextColor="White" BackgroundColor="#FFC100" BorderRadius="0" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

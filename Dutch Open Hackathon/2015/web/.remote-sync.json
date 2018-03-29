@@ -1,0 +1,13 @@
+{
+  "uploadOnSave": true,
+  "hostname": "modision.com",
+  "port": "22",
+  "target": "/media/storage/websites/hackathon/web",
+  "ignore": [
+    ".git/**",
+    ".remote-sync.json"
+  ],
+  "username": "trevi",
+  "password": "75FnOsWR2oes",
+  "transport": "scp"
+}

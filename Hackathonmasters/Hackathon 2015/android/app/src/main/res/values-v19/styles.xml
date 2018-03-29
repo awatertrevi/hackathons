@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="Base.Theme.Healthpath" parent="Theme.AppCompat.Light.NoActionBar">
+                <item name="colorPrimary">#4C61E4</item>
+                <item name="colorPrimaryDark">#3949AB</item>
+                <item name="colorAccent">#3949AB</item>
+                <item name="android:windowBackground">@color/window_background</item>
+        </style>
+</resources>

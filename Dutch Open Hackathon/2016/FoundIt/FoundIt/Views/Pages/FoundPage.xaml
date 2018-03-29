@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Found Something" Icon="checkbox.png" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:FoundIt.Views.Controls;assembly=FoundIt" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" x:Class="FoundIt.Views.Pages.FoundPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Save" Command="{Binding SaveFoundItem}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout>
+			<TableView Intent="Menu" HasUnevenRows="True">
+				<TableSection>
+					<ViewCell Tapped="MakeImage">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="200" />
+							</Grid.RowDefinitions>
+							<Image x:Name="image" Source="no_pic_available.jpg" Grid.Row="0" Aspect="AspectFill" HorizontalOptions="FillAndExpand" />
+						</Grid>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Name:" TextColor="Silver" />
+							<Entry x:Name="nameField" Text="{Binding FoundItem.LostItem.Name}" />
+						</StackLayout>
+					</ViewCell>
+				</TableSection>
+				<TableSection>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Description:" TextColor="Silver" />
+							<Editor x:Name="descriptionField" HeightRequest="100" Text="{Binding FoundItem.LostItem.Description}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Finding Time:" TextColor="Silver" />
+							<controls:DateTimePicker x:Name="findingTimeField" DateTime="{Binding FoundItem.FoundTime}" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<StackLayout Padding="15">
+							<Label Text="Finding Location:" TextColor="Silver" />
+							<Entry x:Name="locationField" Text="{Binding FoundItem.FindAddress}" Unfocused="Handle_Unfocused" />
+						</StackLayout>
+					</ViewCell>
+					<ViewCell>
+						<maps:Map x:Name="map" IsEnabled="False" HeightRequest="200" />
+					</ViewCell>
+				</TableSection>
+			</TableView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
