@@ -8,5 +8,5 @@ Organized by [ByMyApp](events.bemyapp.com).
  - Nick van Breda
  
  ### Group Picture
-![](https://raw.githubusercontent.com/awatertrevi/dutch-open-hackathon-2016/master/group.jpg)
+![](https://raw.githubusercontent.com/awatertrevi/hackathons/master/Dutch%20Open%20Hackathon/2016/group.jpg)
  
