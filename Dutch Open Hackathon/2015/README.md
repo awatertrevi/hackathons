@@ -8,4 +8,4 @@ Organized by [BeMyApp](http://events.bemyapp.com/).
  - [Trevi Awater](https://awatertrevi.github.io/)
 
 ## Group Picture
-![](https://raw.githubusercontent.com/awatertrevi/dutch-open-hackathon-2015/master/photos/everyone.jpg)
+![](https://raw.githubusercontent.com/awatertrevi/hackathons/master/Dutch%20Open%20Hackathon/2015/photos/everyone.jpg)
