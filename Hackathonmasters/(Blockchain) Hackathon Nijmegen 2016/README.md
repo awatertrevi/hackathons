@@ -7,4 +7,4 @@ Organized by [Hackathon Masters](http://hackathonmasters.com/).
  - [Trevi Awater](http://awatertrevi.github.io/)
 
 ### Group Picture
-![](https://github.com/awatertrevi/hackathon-nijmegen-2016/blob/master/group.jpg)
+![](https://raw.githubusercontent.com/awatertrevi/hackathons/master/Hackathonmasters/(Blockchain)%20Hackathon%20Nijmegen%202016/group.jpg)
