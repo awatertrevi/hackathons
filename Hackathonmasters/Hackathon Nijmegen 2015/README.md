@@ -9,4 +9,4 @@ Organized by [Hackathon Masters](http://hackathonmasters.com/).
  - [Trevi Awater](http://awatertrevi.github.io/)
 
 ### Group Picture
-![](https://github.com/awatertrevi/hackathon-nijmegen-2015/blob/master/photos/everyone.jpg)
+![](https://github.com/awatertrevi/hackathons/blob/master/Hackathonmasters/Hackathon%20Nijmegen%202015/photos/everyone.jpg)
