@@ -10,4 +10,4 @@ Organized by [BeMyApp](http://events.bemyapp.com/).
  - [Trevi Awater](https://awatertrevi.github.io/)
 
 ### Group picture
-![](https://raw.githubusercontent.com/awatertrevi/hacking-healthcare-2017/master/team.jpg)
+![](https://raw.githubusercontent.com/awatertrevi/hackathons/Hacking Healthcare/master/team.jpg)
