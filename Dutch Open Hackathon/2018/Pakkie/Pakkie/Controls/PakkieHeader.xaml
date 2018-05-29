@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pakkie.Controls.PakkieHeader" BackgroundColor="{StaticResource mainColor}" HeightRequest="38">
+  <ContentView.Content>
+    <Image Source="headerlogo.png" Aspect="AspectFit" Margin="5" HeightRequest="5"/>
+  </ContentView.Content>
+</ContentView>

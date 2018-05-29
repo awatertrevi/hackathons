@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<framework:PageBase x:TypeArguments="viewModels:OnboardingViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:framework="clr-namespace:Pakkie.Framework;assembly=Pakkie"
+             xmlns:ui="clr-namespace:Vapolia.Lib.Ui;assembly=XamarinFormsGesture"
+             xmlns:viewModels="clr-namespace:Pakkie.ViewModels;assembly=Pakkie"
+             x:Class="Pakkie.Pages.OnboardingPage" BackgroundColor="Default">
+    <ContentPage.Content>
+        <ContentView x:Name="Onboarding" ui:Gesture.SwipeRightCommand="{Binding SwipeRightCommand}" ui:Gesture.SwipeLeftCommand="{Binding SwipeLeftCommand}">
+        </ContentView>
+    </ContentPage.Content>
+</framework:PageBase>

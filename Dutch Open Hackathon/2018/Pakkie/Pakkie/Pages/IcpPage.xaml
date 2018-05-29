@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<framework:PageBase x:TypeArguments="viewModels:IcpViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:framework="clr-namespace:Pakkie.Framework;assembly=Pakkie"
+             xmlns:viewModels="clr-namespace:Pakkie.ViewModels;assembly=Pakkie"
+             xmlns:controls="clr-namespace:Pakkie.Controls;assembly=Pakkie"
+             xmlns:effects="clr-namespace:Pakkie.Effects;assembly=Pakkie"
+             xmlns:cell="clr-namespace:Pakkie.Cell;assembly=Pakkie"
+             x:Class="Pakkie.Pages.IcpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <controls:PakkieHeader/>
+            <StackLayout BackgroundColor="{StaticResource progressBackground}" Margin="0,0,0,0" Padding="8,12,8,8">
+                <Image Source="bar2.png" Aspect="AspectFit" VerticalOptions="Center"></Image>
+            </StackLayout>
+            <controls:InfoLabel Title="INFORMATIE" Message="Selecteer de mensen die je Pakkie willen aannemen!" Padding="0, 8"/>
+            <ListView ItemsSource="{Binding Contacts}" HasUnevenRows="True" ItemSelected="ListView_NoItemSelection" Margin="0,8" BackgroundColor="#FAFAFA" VerticalOptions="StartAndExpand">
+                <ListView.Effects>
+                    <effects:NoSelectionEffect/>
+                </ListView.Effects>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <cell:ContactCell/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Gereed" Command="{Binding NextCommand}" HorizontalOptions="CenterAndExpand" BackgroundColor="{StaticResource mainColor}" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</framework:PageBase>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pakkie.Cell.PartnerCell" >
+    <ViewCell.View>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="0" ColumnSpacing="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="8"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+                <ColumnDefinition Width="25*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ContentView Grid.Row="0"/>
+            <Image Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Source="{Binding Logo}"/>
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Name}" FontSize="8" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center"/>
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding OptInMessage}" FontSize="8" FontAttributes="Bold" TextColor="{StaticResource infoMessageColor}"/>
+            <Switch Grid.Row="2" Grid.RowSpan="2" Grid.Column="2" IsToggled="{Binding HasOptIn}"/>
+            <ContentView Grid.Row="4" Grid.RowSpan="2"/>
+        </Grid>
+    </ViewCell.View>
+</ViewCell>

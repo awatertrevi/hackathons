@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Pakkie.Controls;assembly=Pakkie"
+             x:Class="Pakkie.Cell.ContactCell">
+    <ViewCell.View>
+        <Grid RowSpacing="4" ColumnSpacing="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+            <ContentView Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0"/>
+            <Image Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Source="{Binding Avatar}" />
+            <Label Grid.Column="2" Grid.Row="1" Text="{Binding Name}" FontSize="8" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center"/>
+            <Label Grid.Column="2" Grid.Row="2" Text="{Binding Address}" FontSize="8" FontAttributes="Bold" TextColor="{StaticResource infoMessageColor}" VerticalTextAlignment="Center"/>
+            <Switch Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" IsToggled="{Binding IsSelected}"/>
+            <ContentView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5"/>
+        </Grid>
+    </ViewCell.View>
+</ViewCell>

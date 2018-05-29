@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<framework:PageBase x:TypeArguments="viewModels:DeliveryViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:framework="clr-namespace:Pakkie.Framework;assembly=Pakkie"
+             xmlns:viewModels="clr-namespace:Pakkie.ViewModels;assembly=Pakkie"
+             x:Class="Pakkie.Pages.DeliveryPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Command="{Binding SendMessageCommand}" Text="Verplaats Pakkie!"/>
+        </StackLayout>
+    </ContentPage.Content>
+</framework:PageBase>
